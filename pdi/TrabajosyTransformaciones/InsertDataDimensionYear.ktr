@@ -442,8 +442,8 @@
     <access>Native</access>
     <database>TIN</database>
     <port>3306</port>
-    <username>javivimol</username>
-    <password>Encrypted 2be98afc820c6848dbd10fc21e1a19ef6</password>
+    <username>root</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb79ce10cc9da0ce</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -552,7 +552,7 @@
     <accept_field/>
     <accept_stepname/>
     <file>
-      <name>/home/javivimol/Escritorio/abandono.xlsx</name>
+      <name>C:\TIN\pdi\Fuentes\abandono.xlsx</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -847,7 +847,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>96</xloc>
+      <xloc>80</xloc>
       <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>

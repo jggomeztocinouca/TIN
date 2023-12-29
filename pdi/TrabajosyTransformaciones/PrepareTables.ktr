@@ -440,10 +440,10 @@
     <server>localhost</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>TIN</database>
+    <database>mysql</database>
     <port>3306</port>
-    <username>javivimol</username>
-    <password>Encrypted 2be98afc820c6848dbd10fc21e1a19ef6</password>
+    <username>root</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb79ce10cc9da0ce</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -587,12 +587,12 @@ CREATE TABLE H_NUMPROFESORES(
     YEAR_ID INT,
     SEXO_ID INT,
     CCAA_ID INT,
-	CENTRO_ID INT,
+    CENTRO_ID INT,
     nPROFESORES INT,
     FOREIGN KEY (SEXO_ID) REFERENCES D_SEXO(SEXO_ID),
     FOREIGN KEY (YEAR_ID) REFERENCES D_YEAR(ID_year),
     FOREIGN KEY (CCAA_ID) REFERENCES D_CCAA(CCAA_ID),
-	FOREIGN KEY (CENTRO_ID) REFERENCES D_CENTROS(ID_CENTRO)
+    FOREIGN KEY (CENTRO_ID) REFERENCES D_CENTROS(ID_CENTRO)
 );</sql>
     <set_params>N</set_params>
     <insert_field/>
