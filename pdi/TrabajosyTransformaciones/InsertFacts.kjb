@@ -10,9 +10,9 @@
   <modified_user>-</modified_user>
   <modified_date>2023/12/21 19:00:41.836</modified_date>
   <parameters>
-    </parameters>
+  </parameters>
   <slaveservers>
-    </slaveservers>
+  </slaveservers>
   <job-log-table>
     <connection/>
     <schema/>
@@ -756,7 +756,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>/home/javivimol/Escritorio/TIN/pdi/TrabajosyTransformaciones/InsertNumProfesoresSexoFacts2012.ktr</filename>
+      <filename>${Internal.Entry.Current.Directory}/InsertNumProfesoresSexoFacts2012.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>

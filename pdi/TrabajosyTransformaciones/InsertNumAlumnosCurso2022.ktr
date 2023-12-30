@@ -442,8 +442,8 @@
     <access>Native</access>
     <database>TIN</database>
     <port>3306</port>
-    <username>javivimol</username>
-    <password>Encrypted 2be98afc820c6848dbd10fc21e1a19ef6</password>
+    <username>root</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb79ce10cc9da0ce</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -707,9 +707,9 @@
     <selectValuesType>N</selectValuesType>
     <setEmptyStringAll>N</setEmptyStringAll>
     <valuetypes>
-      </valuetypes>
+    </valuetypes>
     <fields>
-      </fields>
+    </fields>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -938,7 +938,7 @@ INSERT INTO H_NUMALUMNOS (YEAR_ID, SEXO_ID, CCAA_ID, CENTRO_ID, ENSENANZA_ID, nA
     <accept_field/>
     <accept_stepname/>
     <file>
-      <name>/home/javivimol/Escritorio/TIN/pdi/Fuentes/AlumnadoMatriculado2022.xlsx</name>
+      <name>C:\TIN\pdi\Fuentes\AlumnadoMatriculado2022.xlsx</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -1203,7 +1203,7 @@ else{
     CCAA = CCAACorresponde[rowNumber];
 }
 
-</jsScript_script>
+        </jsScript_script>
       </jsScript>
     </jsScripts>
     <fields>
@@ -1425,9 +1425,9 @@ else{
     <selectValuesType>N</selectValuesType>
     <setEmptyStringAll>N</setEmptyStringAll>
     <valuetypes>
-      </valuetypes>
+    </valuetypes>
     <fields>
-      </fields>
+    </fields>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -1656,7 +1656,7 @@ INSERT INTO H_NUMALUMNOS (YEAR_ID, SEXO_ID, CCAA_ID, CENTRO_ID, ENSENANZA_ID, nA
     <accept_field/>
     <accept_stepname/>
     <file>
-      <name>/home/javivimol/Escritorio/TIN/pdi/Fuentes/AlumnadoMatriculado2022.xlsx</name>
+      <name>C:\TIN\pdi\Fuentes\AlumnadoMatriculado2022.xlsx</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -1921,7 +1921,7 @@ else{
     CCAA = CCAACorresponde[rowNumberM];
 }
 
-</jsScript_script>
+        </jsScript_script>
       </jsScript>
     </jsScripts>
     <fields>
@@ -2143,9 +2143,9 @@ else{
     <selectValuesType>N</selectValuesType>
     <setEmptyStringAll>N</setEmptyStringAll>
     <valuetypes>
-      </valuetypes>
+    </valuetypes>
     <fields>
-      </fields>
+    </fields>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -2374,7 +2374,7 @@ INSERT INTO H_NUMALUMNOS (YEAR_ID, SEXO_ID, CCAA_ID, CENTRO_ID, ENSENANZA_ID, nA
     <accept_field/>
     <accept_stepname/>
     <file>
-      <name>/home/javivimol/Escritorio/TIN/pdi/Fuentes/AlumnadoMatriculado2022.xlsx</name>
+      <name>C:\TIN\pdi\Fuentes\AlumnadoMatriculado2022.xlsx</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -2639,7 +2639,7 @@ else{
     CCAA = CCAACorresponde[rowNumberP];
 }
 
-</jsScript_script>
+        </jsScript_script>
       </jsScript>
     </jsScripts>
     <fields>
@@ -2861,9 +2861,9 @@ else{
     <selectValuesType>N</selectValuesType>
     <setEmptyStringAll>N</setEmptyStringAll>
     <valuetypes>
-      </valuetypes>
+    </valuetypes>
     <fields>
-      </fields>
+    </fields>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -3092,7 +3092,7 @@ INSERT INTO H_NUMALUMNOS (YEAR_ID, SEXO_ID, CCAA_ID, CENTRO_ID, ENSENANZA_ID, nA
     <accept_field/>
     <accept_stepname/>
     <file>
-      <name>/home/javivimol/Escritorio/TIN/pdi/Fuentes/AlumnadoMatriculado2022.xlsx</name>
+      <name>C:\TIN\pdi\Fuentes\AlumnadoMatriculado2022.xlsx</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -3357,7 +3357,7 @@ else{
     CCAA = CCAACorresponde[rowNumberMP];
 }
 
-</jsScript_script>
+        </jsScript_script>
       </jsScript>
     </jsScripts>
     <fields>
