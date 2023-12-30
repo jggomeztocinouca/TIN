@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>InsertAbandonoFacts</name>
+    <name>InsertNumProfesoresSexoFacts2013</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -428,9 +428,9 @@
     <clusterschemas>
     </clusterschemas>
     <created_user>-</created_user>
-    <created_date>2023/12/21 19:02:22.000</created_date>
+    <created_date>2023/12/26 15:16:48.973</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2023/12/21 19:02:22.000</modified_date>
+    <modified_date>2023/12/26 15:16:48.973</modified_date>
     <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
@@ -501,23 +501,18 @@
   </connection>
   <order>
     <hop>
-      <from>Add sequence</from>
-      <to>Modified JavaScript value</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Microsoft Excel input</from>
       <to>Add sequence</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Modified JavaScript value</from>
-      <to>Filter rows</to>
+      <from>Add sequence</from>
+      <to>Modified JavaScript value</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Select values</from>
-      <to>InsertFacts 2005</to>
+      <from>Modified JavaScript value</from>
+      <to>Filter rows</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -531,33 +526,98 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Microsoft Excel input Fem</from>
-      <to>Add sequence Fem</to>
+      <from>Select values</from>
+      <to>InsertFacts Publicos 2013 HOMBRES</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Modified JavaScript value Fem</from>
-      <to>Filter rows Fem</to>
+      <from>Add sequence 2</from>
+      <to>Modified JavaScript value 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Add sequence Fem</from>
-      <to>Modified JavaScript value Fem</to>
+      <from>Filter rows 2</from>
+      <to>If field value is null 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Filter rows Fem</from>
-      <to>If field value is null Fem</to>
+      <from>If field value is null 2</from>
+      <to>Select values 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Select values Fem</from>
-      <to>InsertFacts Fem</to>
+      <from>Microsoft Excel input 2</from>
+      <to>Add sequence 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>If field value is null Fem</from>
-      <to>Select values Fem</to>
+      <from>Modified JavaScript value 2</from>
+      <to>Filter rows 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values 2</from>
+      <to>InsertFacts Publicos 2013 MUJERES</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Add sequence 3</from>
+      <to>Modified JavaScript value 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Add sequence 2 2</from>
+      <to>Modified JavaScript value 2 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows 3</from>
+      <to>If field value is null 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows 2 2</from>
+      <to>If field value is null 2 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>If field value is null 3</from>
+      <to>Select values 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>If field value is null 2 2</from>
+      <to>Select values 2 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Microsoft Excel input 3</from>
+      <to>Add sequence 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Microsoft Excel input 2 2</from>
+      <to>Add sequence 2 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Modified JavaScript value 3</from>
+      <to>Filter rows 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Modified JavaScript value 2 2</from>
+      <to>Filter rows 2 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values 3</from>
+      <to>InsertFacts Privado 2013 HOMBRES 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values 2 2</from>
+      <to>InsertFacts Privado 2013 MUJERES 2</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -591,13 +651,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>336</xloc>
-      <yloc>208</yloc>
+      <xloc>256</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Add sequence Fem</name>
+    <name>Add sequence 2</name>
     <type>Sequence</type>
     <description/>
     <distribute>Y</distribute>
@@ -607,7 +667,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <valuename>rowNumberFem</valuename>
+    <valuename>rowNumberM</valuename>
     <use_database>N</use_database>
     <connection>SQLconnection</connection>
     <schema/>
@@ -626,8 +686,78 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>320</xloc>
+      <xloc>256</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Add sequence 2 2</name>
+    <type>Sequence</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <valuename>rowNumberMP</valuename>
+    <use_database>N</use_database>
+    <connection>SQLconnection</connection>
+    <schema/>
+    <seqname>SEQ_</seqname>
+    <use_counter>Y</use_counter>
+    <counter_name/>
+    <start_at>1</start_at>
+    <increment_by>1</increment_by>
+    <max_value>999999999</max_value>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>256</xloc>
       <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Add sequence 3</name>
+    <type>Sequence</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <valuename>rowNumberP</valuename>
+    <use_database>N</use_database>
+    <connection>SQLconnection</connection>
+    <schema/>
+    <seqname>SEQ_</seqname>
+    <use_counter>Y</use_counter>
+    <counter_name/>
+    <start_at>1</start_at>
+    <increment_by>1</increment_by>
+    <max_value>999999999</max_value>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>256</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -661,13 +791,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>608</xloc>
-      <yloc>208</yloc>
+      <xloc>528</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Filter rows Fem</name>
+    <name>Filter rows 2</name>
     <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
@@ -677,7 +807,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <send_true_to>If field value is null Fem</send_true_to>
+    <send_true_to>If field value is null 2</send_true_to>
     <send_false_to/>
     <compare>
       <condition>
@@ -696,8 +826,78 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>624</xloc>
+      <xloc>528</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Filter rows 2 2</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>If field value is null 2 2</send_true_to>
+    <send_false_to/>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>CCAA</leftvalue>
+        <function>IS NOT NULL</function>
+        <rightvalue/>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>528</xloc>
       <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Filter rows 3</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>If field value is null 3</send_true_to>
+    <send_false_to/>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>CCAA</leftvalue>
+        <function>IS NOT NULL</function>
+        <rightvalue/>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>528</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -730,13 +930,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>720</xloc>
-      <yloc>208</yloc>
+      <xloc>640</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>If field value is null Fem</name>
+    <name>If field value is null 2</name>
     <type>IfNull</type>
     <description/>
     <distribute>Y</distribute>
@@ -764,13 +964,81 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>752</xloc>
+      <xloc>640</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>If field value is null 2 2</name>
+    <type>IfNull</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <replaceAllByValue>0</replaceAllByValue>
+    <replaceAllMask/>
+    <selectFields>N</selectFields>
+    <selectValuesType>N</selectValuesType>
+    <setEmptyStringAll>N</setEmptyStringAll>
+    <valuetypes>
+      </valuetypes>
+    <fields>
+      </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>640</xloc>
       <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>InsertFacts 2005</name>
+    <name>If field value is null 3</name>
+    <type>IfNull</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <replaceAllByValue>0</replaceAllByValue>
+    <replaceAllMask/>
+    <selectFields>N</selectFields>
+    <selectValuesType>N</selectValuesType>
+    <setEmptyStringAll>N</setEmptyStringAll>
+    <valuetypes>
+      </valuetypes>
+    <fields>
+      </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>640</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>InsertFacts Privado 2013 HOMBRES 2</name>
     <type>ExecSQL</type>
     <description/>
     <distribute>Y</distribute>
@@ -785,27 +1053,14 @@
     <single_statement>N</single_statement>
     <replace_variables>Y</replace_variables>
     <quoteString>N</quoteString>
-    <sql>INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2002,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2003,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2004,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2005,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2006,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2007,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2008,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2009,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2010,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2011,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2012,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2013,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2014,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2015,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2016,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2017,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2018,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2019,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2020,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2021,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2022,'?','?','?');</sql>
+    <sql>INSERT INTO H_NUMPROFESORES (YEAR_ID,SEXO_ID,CCAA_ID,CENTRO_ID,EDAD_ID,nProfesores) VALUES ('?',1,'?',1,6,'?'); --1 en sexoid por ser datos de hombres, 1 en centrosId por ser privado, 6 en edadid por ser los datos de menor 30
+INSERT INTO H_NUMPROFESORES (YEAR_ID,SEXO_ID,CCAA_ID,CENTRO_ID,EDAD_ID,nProfesores) VALUES ('?',1,'?',1,2,'?'); --2 edadid por 30-39
+INSERT INTO H_NUMPROFESORES (YEAR_ID,SEXO_ID,CCAA_ID,CENTRO_ID,EDAD_ID,nProfesores) VALUES ('?',1,'?',1,3,'?'); --3 edadid por 40-49
+INSERT INTO H_NUMPROFESORES (YEAR_ID,SEXO_ID,CCAA_ID,CENTRO_ID,EDAD_ID,nProfesores) VALUES ('?',1,'?',1,4,'?'); --4 edadid por 50-59
+INSERT INTO H_NUMPROFESORES (YEAR_ID,SEXO_ID,CCAA_ID,CENTRO_ID,EDAD_ID,nProfesores) VALUES ('?',1,'?',1,5,'?'); --5 edadid por 60-64
+INSERT INTO H_NUMPROFESORES (YEAR_ID,SEXO_ID,CCAA_ID,CENTRO_ID,EDAD_ID,nProfesores) VALUES ('?',1,'?',1,1,'?'); --1 edadid por 65-mas
+INSERT INTO H_NUMPROFESORES (YEAR_ID,SEXO_ID,CCAA_ID,CENTRO_ID,EDAD_ID,nProfesores) VALUES ('?',1,'?',1,7,'?'); --7 edadid por No consta
+</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -813,193 +1068,67 @@ INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2022,'?',
     <read_field/>
     <arguments>
       <argument>
-        <name>CCAA</name>
-      </argument>
-      <argument>
-        <name>Genero</name>
-      </argument>
-      <argument>
-        <name>2002tasa</name>
+        <name>Anno</name>
       </argument>
       <argument>
         <name>CCAA</name>
       </argument>
       <argument>
-        <name>Genero</name>
+        <name>Menos de 30 añosH</name>
       </argument>
       <argument>
-        <name>2003tasa</name>
-      </argument>
-      <argument>
-        <name>CCAA</name>
-      </argument>
-      <argument>
-        <name>Genero</name>
-      </argument>
-      <argument>
-        <name>2004tasa</name>
+        <name>Anno</name>
       </argument>
       <argument>
         <name>CCAA</name>
       </argument>
       <argument>
-        <name>Genero</name>
+        <name>De 30 a 39H</name>
       </argument>
       <argument>
-        <name>2005tasa</name>
-      </argument>
-      <argument>
-        <name>CCAA</name>
-      </argument>
-      <argument>
-        <name>Genero</name>
-      </argument>
-      <argument>
-        <name>2006tasa</name>
+        <name>Anno</name>
       </argument>
       <argument>
         <name>CCAA</name>
       </argument>
       <argument>
-        <name>Genero</name>
+        <name>De 40 a 49H</name>
       </argument>
       <argument>
-        <name>2007tasa</name>
-      </argument>
-      <argument>
-        <name>CCAA</name>
-      </argument>
-      <argument>
-        <name>Genero</name>
-      </argument>
-      <argument>
-        <name>2008tasa</name>
+        <name>Anno</name>
       </argument>
       <argument>
         <name>CCAA</name>
       </argument>
       <argument>
-        <name>Genero</name>
+        <name>De 50 a 59H</name>
       </argument>
       <argument>
-        <name>2009tasa</name>
-      </argument>
-      <argument>
-        <name>CCAA</name>
-      </argument>
-      <argument>
-        <name>Genero</name>
-      </argument>
-      <argument>
-        <name>2010tasa</name>
+        <name>Anno</name>
       </argument>
       <argument>
         <name>CCAA</name>
       </argument>
       <argument>
-        <name>Genero</name>
+        <name>De 60 a 64H</name>
       </argument>
       <argument>
-        <name>2011tasa</name>
-      </argument>
-      <argument>
-        <name>CCAA</name>
-      </argument>
-      <argument>
-        <name>Genero</name>
-      </argument>
-      <argument>
-        <name>2012tasa</name>
+        <name>Anno</name>
       </argument>
       <argument>
         <name>CCAA</name>
       </argument>
       <argument>
-        <name>Genero</name>
+        <name>65 y másH</name>
       </argument>
       <argument>
-        <name>2013tasa</name>
-      </argument>
-      <argument>
-        <name>CCAA</name>
-      </argument>
-      <argument>
-        <name>Genero</name>
-      </argument>
-      <argument>
-        <name>2014tasa</name>
+        <name>Anno</name>
       </argument>
       <argument>
         <name>CCAA</name>
       </argument>
       <argument>
-        <name>Genero</name>
-      </argument>
-      <argument>
-        <name>2015tasa</name>
-      </argument>
-      <argument>
-        <name>CCAA</name>
-      </argument>
-      <argument>
-        <name>Genero</name>
-      </argument>
-      <argument>
-        <name>2016tasa</name>
-      </argument>
-      <argument>
-        <name>CCAA</name>
-      </argument>
-      <argument>
-        <name>Genero</name>
-      </argument>
-      <argument>
-        <name>2017tasa</name>
-      </argument>
-      <argument>
-        <name>CCAA</name>
-      </argument>
-      <argument>
-        <name>Genero</name>
-      </argument>
-      <argument>
-        <name>2018tasa</name>
-      </argument>
-      <argument>
-        <name>CCAA</name>
-      </argument>
-      <argument>
-        <name>Genero</name>
-      </argument>
-      <argument>
-        <name>2019tasa</name>
-      </argument>
-      <argument>
-        <name>CCAA</name>
-      </argument>
-      <argument>
-        <name>Genero</name>
-      </argument>
-      <argument>
-        <name>2020tasa</name>
-      </argument>
-      <argument>
-        <name>CCAA</name>
-      </argument>
-      <argument>
-        <name>Genero</name>
-      </argument>
-      <argument>
-        <name>2021tasa</name>
-      </argument>
-      <argument>
-        <name>CCAA</name>
-      </argument>
-      <argument>
-        <name>Genero</name>
-      </argument>
-      <argument>
-        <name>2022tasa</name>
+        <name>No consta edadH</name>
       </argument>
     </arguments>
     <attributes/>
@@ -1012,12 +1141,12 @@ INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2022,'?',
     </remotesteps>
     <GUI>
       <xloc>944</xloc>
-      <yloc>208</yloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>InsertFacts Fem</name>
+    <name>InsertFacts Privado 2013 MUJERES 2</name>
     <type>ExecSQL</type>
     <description/>
     <distribute>Y</distribute>
@@ -1032,27 +1161,14 @@ INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2022,'?',
     <single_statement>N</single_statement>
     <replace_variables>Y</replace_variables>
     <quoteString>N</quoteString>
-    <sql>INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2002,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2003,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2004,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2005,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2006,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2007,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2008,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2009,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2010,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2011,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2012,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2013,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2014,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2015,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2016,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2017,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2018,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2019,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2020,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2021,'?','?','?');
-INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2022,'?','?','?');</sql>
+    <sql>INSERT INTO H_NUMPROFESORES (YEAR_ID,SEXO_ID,CCAA_ID,CENTRO_ID,EDAD_ID,nProfesores) VALUES ('?',2,'?',1,6,'?'); --2 en sexoid por ser datos de mujeres, 1 en centrosId por ser privado, 6 en edadid por ser los datos de menor 30
+INSERT INTO H_NUMPROFESORES (YEAR_ID,SEXO_ID,CCAA_ID,CENTRO_ID,EDAD_ID,nProfesores) VALUES ('?',2,'?',1,2,'?'); --2 edadid por 30-39
+INSERT INTO H_NUMPROFESORES (YEAR_ID,SEXO_ID,CCAA_ID,CENTRO_ID,EDAD_ID,nProfesores) VALUES ('?',2,'?',1,3,'?'); --3 edadid por 40-49
+INSERT INTO H_NUMPROFESORES (YEAR_ID,SEXO_ID,CCAA_ID,CENTRO_ID,EDAD_ID,nProfesores) VALUES ('?',2,'?',1,4,'?'); --4 edadid por 50-59
+INSERT INTO H_NUMPROFESORES (YEAR_ID,SEXO_ID,CCAA_ID,CENTRO_ID,EDAD_ID,nProfesores) VALUES ('?',2,'?',1,5,'?'); --5 edadid por 60-64
+INSERT INTO H_NUMPROFESORES (YEAR_ID,SEXO_ID,CCAA_ID,CENTRO_ID,EDAD_ID,nProfesores) VALUES ('?',2,'?',1,1,'?'); --1 edadid por 65-mas
+INSERT INTO H_NUMPROFESORES (YEAR_ID,SEXO_ID,CCAA_ID,CENTRO_ID,EDAD_ID,nProfesores) VALUES ('?',2,'?',1,7,'?'); --7 edadid por No consta
+</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -1060,193 +1176,67 @@ INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2022,'?',
     <read_field/>
     <arguments>
       <argument>
-        <name>CCAA</name>
-      </argument>
-      <argument>
-        <name>Genero</name>
-      </argument>
-      <argument>
-        <name>2002tasa</name>
+        <name>Anno</name>
       </argument>
       <argument>
         <name>CCAA</name>
       </argument>
       <argument>
-        <name>Genero</name>
+        <name>Menos de 30 añosM</name>
       </argument>
       <argument>
-        <name>2003tasa</name>
-      </argument>
-      <argument>
-        <name>CCAA</name>
-      </argument>
-      <argument>
-        <name>Genero</name>
-      </argument>
-      <argument>
-        <name>2004tasa</name>
+        <name>Anno</name>
       </argument>
       <argument>
         <name>CCAA</name>
       </argument>
       <argument>
-        <name>Genero</name>
+        <name>De 30 a 39M</name>
       </argument>
       <argument>
-        <name>2005tasa</name>
-      </argument>
-      <argument>
-        <name>CCAA</name>
-      </argument>
-      <argument>
-        <name>Genero</name>
-      </argument>
-      <argument>
-        <name>2006tasa</name>
+        <name>Anno</name>
       </argument>
       <argument>
         <name>CCAA</name>
       </argument>
       <argument>
-        <name>Genero</name>
+        <name>De 40 a 49M</name>
       </argument>
       <argument>
-        <name>2007tasa</name>
-      </argument>
-      <argument>
-        <name>CCAA</name>
-      </argument>
-      <argument>
-        <name>Genero</name>
-      </argument>
-      <argument>
-        <name>2008tasa</name>
+        <name>Anno</name>
       </argument>
       <argument>
         <name>CCAA</name>
       </argument>
       <argument>
-        <name>Genero</name>
+        <name>De 50 a 59M</name>
       </argument>
       <argument>
-        <name>2009tasa</name>
-      </argument>
-      <argument>
-        <name>CCAA</name>
-      </argument>
-      <argument>
-        <name>Genero</name>
-      </argument>
-      <argument>
-        <name>2010tasa</name>
+        <name>Anno</name>
       </argument>
       <argument>
         <name>CCAA</name>
       </argument>
       <argument>
-        <name>Genero</name>
+        <name>De 60 a 64M</name>
       </argument>
       <argument>
-        <name>2011tasa</name>
-      </argument>
-      <argument>
-        <name>CCAA</name>
-      </argument>
-      <argument>
-        <name>Genero</name>
-      </argument>
-      <argument>
-        <name>2012tasa</name>
+        <name>Anno</name>
       </argument>
       <argument>
         <name>CCAA</name>
       </argument>
       <argument>
-        <name>Genero</name>
+        <name>65 y másM</name>
       </argument>
       <argument>
-        <name>2013tasa</name>
-      </argument>
-      <argument>
-        <name>CCAA</name>
-      </argument>
-      <argument>
-        <name>Genero</name>
-      </argument>
-      <argument>
-        <name>2014tasa</name>
+        <name>Anno</name>
       </argument>
       <argument>
         <name>CCAA</name>
       </argument>
       <argument>
-        <name>Genero</name>
-      </argument>
-      <argument>
-        <name>2015tasa</name>
-      </argument>
-      <argument>
-        <name>CCAA</name>
-      </argument>
-      <argument>
-        <name>Genero</name>
-      </argument>
-      <argument>
-        <name>2016tasa</name>
-      </argument>
-      <argument>
-        <name>CCAA</name>
-      </argument>
-      <argument>
-        <name>Genero</name>
-      </argument>
-      <argument>
-        <name>2017tasa</name>
-      </argument>
-      <argument>
-        <name>CCAA</name>
-      </argument>
-      <argument>
-        <name>Genero</name>
-      </argument>
-      <argument>
-        <name>2018tasa</name>
-      </argument>
-      <argument>
-        <name>CCAA</name>
-      </argument>
-      <argument>
-        <name>Genero</name>
-      </argument>
-      <argument>
-        <name>2019tasa</name>
-      </argument>
-      <argument>
-        <name>CCAA</name>
-      </argument>
-      <argument>
-        <name>Genero</name>
-      </argument>
-      <argument>
-        <name>2020tasa</name>
-      </argument>
-      <argument>
-        <name>CCAA</name>
-      </argument>
-      <argument>
-        <name>Genero</name>
-      </argument>
-      <argument>
-        <name>2021tasa</name>
-      </argument>
-      <argument>
-        <name>CCAA</name>
-      </argument>
-      <argument>
-        <name>Genero</name>
-      </argument>
-      <argument>
-        <name>2022tasa</name>
+        <name>No consta edadM</name>
       </argument>
     </arguments>
     <attributes/>
@@ -1258,8 +1248,224 @@ INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2022,'?',
       </output>
     </remotesteps>
     <GUI>
-      <xloc>992</xloc>
+      <xloc>944</xloc>
       <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>InsertFacts Publicos 2013 HOMBRES</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>SQLconnection</connection>
+    <execute_each_row>Y</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>Y</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>INSERT INTO H_NUMPROFESORES (YEAR_ID,SEXO_ID,CCAA_ID,CENTRO_ID,EDAD_ID,nProfesores) VALUES ('?',1,'?',2,6,'?'); --1 en sexoid por ser datos de hombres, 2 en centrosId por ser publico, 6 en edadid por ser los datos de menor 30
+INSERT INTO H_NUMPROFESORES (YEAR_ID,SEXO_ID,CCAA_ID,CENTRO_ID,EDAD_ID,nProfesores) VALUES ('?',1,'?',2,2,'?'); --2 edadid por 30-39
+INSERT INTO H_NUMPROFESORES (YEAR_ID,SEXO_ID,CCAA_ID,CENTRO_ID,EDAD_ID,nProfesores) VALUES ('?',1,'?',2,3,'?'); --3 edadid por 40-49
+INSERT INTO H_NUMPROFESORES (YEAR_ID,SEXO_ID,CCAA_ID,CENTRO_ID,EDAD_ID,nProfesores) VALUES ('?',1,'?',2,4,'?'); --4 edadid por 50-59
+INSERT INTO H_NUMPROFESORES (YEAR_ID,SEXO_ID,CCAA_ID,CENTRO_ID,EDAD_ID,nProfesores) VALUES ('?',1,'?',2,5,'?'); --5 edadid por 60-64
+INSERT INTO H_NUMPROFESORES (YEAR_ID,SEXO_ID,CCAA_ID,CENTRO_ID,EDAD_ID,nProfesores) VALUES ('?',1,'?',2,1,'?'); --1 edadid por 65-mas
+INSERT INTO H_NUMPROFESORES (YEAR_ID,SEXO_ID,CCAA_ID,CENTRO_ID,EDAD_ID,nProfesores) VALUES ('?',1,'?',2,7,'?'); --7 edadid por No consta
+</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+      <argument>
+        <name>Anno</name>
+      </argument>
+      <argument>
+        <name>CCAA</name>
+      </argument>
+      <argument>
+        <name>Menos de 30 añosH</name>
+      </argument>
+      <argument>
+        <name>Anno</name>
+      </argument>
+      <argument>
+        <name>CCAA</name>
+      </argument>
+      <argument>
+        <name>De 30 a 39H</name>
+      </argument>
+      <argument>
+        <name>Anno</name>
+      </argument>
+      <argument>
+        <name>CCAA</name>
+      </argument>
+      <argument>
+        <name>De 40 a 49H</name>
+      </argument>
+      <argument>
+        <name>Anno</name>
+      </argument>
+      <argument>
+        <name>CCAA</name>
+      </argument>
+      <argument>
+        <name>De 50 a 59H</name>
+      </argument>
+      <argument>
+        <name>Anno</name>
+      </argument>
+      <argument>
+        <name>CCAA</name>
+      </argument>
+      <argument>
+        <name>De 60 a 64H</name>
+      </argument>
+      <argument>
+        <name>Anno</name>
+      </argument>
+      <argument>
+        <name>CCAA</name>
+      </argument>
+      <argument>
+        <name>65 y másH</name>
+      </argument>
+      <argument>
+        <name>Anno</name>
+      </argument>
+      <argument>
+        <name>CCAA</name>
+      </argument>
+      <argument>
+        <name>No consta edadH</name>
+      </argument>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>944</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>InsertFacts Publicos 2013 MUJERES</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>SQLconnection</connection>
+    <execute_each_row>Y</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>Y</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>INSERT INTO H_NUMPROFESORES (YEAR_ID,SEXO_ID,CCAA_ID,CENTRO_ID,EDAD_ID,nProfesores) VALUES ('?',2,'?',2,6,'?'); --2 en sexoid por ser datos de mujeres, 2 en centrosId por ser publico, 6 en edadid por ser los datos de menor 30
+INSERT INTO H_NUMPROFESORES (YEAR_ID,SEXO_ID,CCAA_ID,CENTRO_ID,EDAD_ID,nProfesores) VALUES ('?',2,'?',2,2,'?'); --2 edadid por 30-39
+INSERT INTO H_NUMPROFESORES (YEAR_ID,SEXO_ID,CCAA_ID,CENTRO_ID,EDAD_ID,nProfesores) VALUES ('?',2,'?',2,3,'?'); --3 edadid por 40-49
+INSERT INTO H_NUMPROFESORES (YEAR_ID,SEXO_ID,CCAA_ID,CENTRO_ID,EDAD_ID,nProfesores) VALUES ('?',2,'?',2,4,'?'); --4 edadid por 50-59
+INSERT INTO H_NUMPROFESORES (YEAR_ID,SEXO_ID,CCAA_ID,CENTRO_ID,EDAD_ID,nProfesores) VALUES ('?',2,'?',2,5,'?'); --5 edadid por 60-64
+INSERT INTO H_NUMPROFESORES (YEAR_ID,SEXO_ID,CCAA_ID,CENTRO_ID,EDAD_ID,nProfesores) VALUES ('?',2,'?',2,1,'?'); --1 edadid por 65-mas
+INSERT INTO H_NUMPROFESORES (YEAR_ID,SEXO_ID,CCAA_ID,CENTRO_ID,EDAD_ID,nProfesores) VALUES ('?',2,'?',2,7,'?'); --7 edadid por No consta
+</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+      <argument>
+        <name>Anno</name>
+      </argument>
+      <argument>
+        <name>CCAA</name>
+      </argument>
+      <argument>
+        <name>Menos de 30 añosM</name>
+      </argument>
+      <argument>
+        <name>Anno</name>
+      </argument>
+      <argument>
+        <name>CCAA</name>
+      </argument>
+      <argument>
+        <name>De 30 a 39M</name>
+      </argument>
+      <argument>
+        <name>Anno</name>
+      </argument>
+      <argument>
+        <name>CCAA</name>
+      </argument>
+      <argument>
+        <name>De 40 a 49M</name>
+      </argument>
+      <argument>
+        <name>Anno</name>
+      </argument>
+      <argument>
+        <name>CCAA</name>
+      </argument>
+      <argument>
+        <name>De 50 a 59M</name>
+      </argument>
+      <argument>
+        <name>Anno</name>
+      </argument>
+      <argument>
+        <name>CCAA</name>
+      </argument>
+      <argument>
+        <name>De 60 a 64M</name>
+      </argument>
+      <argument>
+        <name>Anno</name>
+      </argument>
+      <argument>
+        <name>CCAA</name>
+      </argument>
+      <argument>
+        <name>65 y másM</name>
+      </argument>
+      <argument>
+        <name>Anno</name>
+      </argument>
+      <argument>
+        <name>CCAA</name>
+      </argument>
+      <argument>
+        <name>No consta edadM</name>
+      </argument>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>944</xloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1274,7 +1480,7 @@ INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2022,'?',
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <header>Y</header>
+    <header>N</header>
     <noempty>Y</noempty>
     <stoponempty>N</stoponempty>
     <filefield/>
@@ -1290,334 +1496,7 @@ INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2022,'?',
     <accept_field/>
     <accept_stepname/>
     <file>
-      <name>/home/javivimol/Escritorio/TIN/pdi/Fuentes/abandono.xlsx</name>
-      <filemask/>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
-    <fields>
-      <field>
-        <name>2002</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>2003</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>2004</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>2005</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>2006</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>2007</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>2008</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>2009</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>2010</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>2011</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>2012</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>2013</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>2014</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>2015</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>2016</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>2017</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>2018</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>2019</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>2020</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>2021</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>2022</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-    </fields>
-    <sheets>
-      <sheet>
-        <name>tabla-0</name>
-        <startrow>7</startrow>
-        <startcol>22</startcol>
-      </sheet>
-    </sheets>
-    <strict_types>N</strict_types>
-    <error_ignored>Y</error_ignored>
-    <error_line_skipped>N</error_line_skipped>
-    <bad_line_files_destination_directory/>
-    <bad_line_files_extension>warning</bad_line_files_extension>
-    <error_line_files_destination_directory/>
-    <error_line_files_extension>error</error_line_files_extension>
-    <line_number_files_destination_directory/>
-    <line_number_files_extension>line</line_number_files_extension>
-    <shortFileFieldName/>
-    <pathFieldName/>
-    <hiddenFieldName/>
-    <lastModificationTimeFieldName/>
-    <uriNameFieldName/>
-    <rootUriNameFieldName/>
-    <extensionFieldName/>
-    <sizeFieldName/>
-    <spreadsheet_type>POI</spreadsheet_type>
-    <password>Encrypted </password>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>176</xloc>
-      <yloc>208</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Microsoft Excel input Fem</name>
-    <type>ExcelInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <header>Y</header>
-    <noempty>Y</noempty>
-    <stoponempty>N</stoponempty>
-    <filefield/>
-    <sheetfield/>
-    <sheetrownumfield/>
-    <rownumfield/>
-    <sheetfield/>
-    <filefield/>
-    <limit>0</limit>
-    <encoding/>
-    <add_to_result_filenames>Y</add_to_result_filenames>
-    <accept_filenames>N</accept_filenames>
-    <accept_field/>
-    <accept_stepname/>
-    <file>
-      <name>/home/javivimol/Escritorio/TIN/pdi/Fuentes/abandono.xlsx</name>
+      <name>/home/javivimol/Escritorio/TIN/pdi/Fuentes/numProfesoresSexo2013.xlsx</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -1630,8 +1509,8 @@ INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2022,'?',
     </file>
     <fields>
       <field>
-        <name>2002</name>
-        <type>Number</type>
+        <name>Menos de 30 años</name>
+        <type>Integer</type>
         <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
@@ -1642,8 +1521,8 @@ INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2022,'?',
         <group/>
       </field>
       <field>
-        <name>2003</name>
-        <type>Number</type>
+        <name>De 30 a 39</name>
+        <type>Integer</type>
         <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
@@ -1654,8 +1533,8 @@ INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2022,'?',
         <group/>
       </field>
       <field>
-        <name>2004</name>
-        <type>Number</type>
+        <name>De 40 a 49</name>
+        <type>Integer</type>
         <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
@@ -1666,8 +1545,8 @@ INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2022,'?',
         <group/>
       </field>
       <field>
-        <name>2005</name>
-        <type>Number</type>
+        <name>De 50 a 59</name>
+        <type>Integer</type>
         <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
@@ -1678,8 +1557,8 @@ INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2022,'?',
         <group/>
       </field>
       <field>
-        <name>2006</name>
-        <type>Number</type>
+        <name>De 60 a 64</name>
+        <type>Integer</type>
         <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
@@ -1690,8 +1569,8 @@ INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2022,'?',
         <group/>
       </field>
       <field>
-        <name>2007</name>
-        <type>Number</type>
+        <name>65 y más</name>
+        <type>Integer</type>
         <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
@@ -1702,176 +1581,8 @@ INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2022,'?',
         <group/>
       </field>
       <field>
-        <name>2008</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>2009</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>2010</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>2011</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>2012</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>2013</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>2014</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>2015</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>2016</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>2017</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>2018</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>2019</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>2020</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>2021</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>2022</name>
-        <type>Number</type>
+        <name>No consta edad</name>
+        <type>Integer</type>
         <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
@@ -1885,8 +1596,8 @@ INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2022,'?',
     <sheets>
       <sheet>
         <name>tabla-0</name>
-        <startrow>7</startrow>
-        <startcol>43</startcol>
+        <startrow>72</startrow>
+        <startcol>10</startcol>
       </sheet>
     </sheets>
     <strict_types>N</strict_types>
@@ -1917,8 +1628,500 @@ INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2022,'?',
       </output>
     </remotesteps>
     <GUI>
-      <xloc>176</xloc>
+      <xloc>128</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Microsoft Excel input 2</name>
+    <type>ExcelInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <header>N</header>
+    <noempty>Y</noempty>
+    <stoponempty>N</stoponempty>
+    <filefield/>
+    <sheetfield/>
+    <sheetrownumfield/>
+    <rownumfield/>
+    <sheetfield/>
+    <filefield/>
+    <limit>0</limit>
+    <encoding/>
+    <add_to_result_filenames>Y</add_to_result_filenames>
+    <accept_filenames>N</accept_filenames>
+    <accept_field/>
+    <accept_stepname/>
+    <file>
+      <name>/home/javivimol/Escritorio/TIN/pdi/Fuentes/numProfesoresSexo2013.xlsx</name>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+      <name/>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <fields>
+      <field>
+        <name>Menos de 30 años</name>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>De 30 a 39</name>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>De 40 a 49</name>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>De 50 a 59</name>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>De 60 a 64</name>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>65 y más</name>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>No consta edad</name>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+    </fields>
+    <sheets>
+      <sheet>
+        <name>tabla-0</name>
+        <startrow>72</startrow>
+        <startcol>18</startcol>
+      </sheet>
+    </sheets>
+    <strict_types>N</strict_types>
+    <error_ignored>Y</error_ignored>
+    <error_line_skipped>N</error_line_skipped>
+    <bad_line_files_destination_directory/>
+    <bad_line_files_extension>warning</bad_line_files_extension>
+    <error_line_files_destination_directory/>
+    <error_line_files_extension>error</error_line_files_extension>
+    <line_number_files_destination_directory/>
+    <line_number_files_extension>line</line_number_files_extension>
+    <shortFileFieldName/>
+    <pathFieldName/>
+    <hiddenFieldName/>
+    <lastModificationTimeFieldName/>
+    <uriNameFieldName/>
+    <rootUriNameFieldName/>
+    <extensionFieldName/>
+    <sizeFieldName/>
+    <spreadsheet_type>POI</spreadsheet_type>
+    <password>Encrypted </password>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>128</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Microsoft Excel input 2 2</name>
+    <type>ExcelInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <header>N</header>
+    <noempty>Y</noempty>
+    <stoponempty>N</stoponempty>
+    <filefield/>
+    <sheetfield/>
+    <sheetrownumfield/>
+    <rownumfield/>
+    <sheetfield/>
+    <filefield/>
+    <limit>0</limit>
+    <encoding/>
+    <add_to_result_filenames>Y</add_to_result_filenames>
+    <accept_filenames>N</accept_filenames>
+    <accept_field/>
+    <accept_stepname/>
+    <file>
+      <name>/home/javivimol/Escritorio/TIN/pdi/Fuentes/numProfesoresSexo2013.xlsx</name>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+      <name/>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <fields>
+      <field>
+        <name>Menos de 30 años</name>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>De 30 a 39</name>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>De 40 a 49</name>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>De 50 a 59</name>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>De 60 a 64</name>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>65 y más</name>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>No consta edad</name>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+    </fields>
+    <sheets>
+      <sheet>
+        <name>tabla-0</name>
+        <startrow>136</startrow>
+        <startcol>18</startcol>
+      </sheet>
+    </sheets>
+    <strict_types>N</strict_types>
+    <error_ignored>Y</error_ignored>
+    <error_line_skipped>N</error_line_skipped>
+    <bad_line_files_destination_directory/>
+    <bad_line_files_extension>warning</bad_line_files_extension>
+    <error_line_files_destination_directory/>
+    <error_line_files_extension>error</error_line_files_extension>
+    <line_number_files_destination_directory/>
+    <line_number_files_extension>line</line_number_files_extension>
+    <shortFileFieldName/>
+    <pathFieldName/>
+    <hiddenFieldName/>
+    <lastModificationTimeFieldName/>
+    <uriNameFieldName/>
+    <rootUriNameFieldName/>
+    <extensionFieldName/>
+    <sizeFieldName/>
+    <spreadsheet_type>POI</spreadsheet_type>
+    <password>Encrypted </password>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>128</xloc>
       <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Microsoft Excel input 3</name>
+    <type>ExcelInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <header>N</header>
+    <noempty>Y</noempty>
+    <stoponempty>N</stoponempty>
+    <filefield/>
+    <sheetfield/>
+    <sheetrownumfield/>
+    <rownumfield/>
+    <sheetfield/>
+    <filefield/>
+    <limit>0</limit>
+    <encoding/>
+    <add_to_result_filenames>Y</add_to_result_filenames>
+    <accept_filenames>N</accept_filenames>
+    <accept_field/>
+    <accept_stepname/>
+    <file>
+      <name>/home/javivimol/Escritorio/TIN/pdi/Fuentes/numProfesoresSexo2013.xlsx</name>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+      <name/>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <fields>
+      <field>
+        <name>Menos de 30 años</name>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>De 30 a 39</name>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>De 40 a 49</name>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>De 50 a 59</name>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>De 60 a 64</name>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>65 y más</name>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>No consta edad</name>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+    </fields>
+    <sheets>
+      <sheet>
+        <name>tabla-0</name>
+        <startrow>136</startrow>
+        <startcol>10</startcol>
+      </sheet>
+    </sheets>
+    <strict_types>N</strict_types>
+    <error_ignored>Y</error_ignored>
+    <error_line_skipped>N</error_line_skipped>
+    <bad_line_files_destination_directory/>
+    <bad_line_files_extension>warning</bad_line_files_extension>
+    <error_line_files_destination_directory/>
+    <error_line_files_extension>error</error_line_files_extension>
+    <line_number_files_destination_directory/>
+    <line_number_files_extension>line</line_number_files_extension>
+    <shortFileFieldName/>
+    <pathFieldName/>
+    <hiddenFieldName/>
+    <lastModificationTimeFieldName/>
+    <uriNameFieldName/>
+    <rootUriNameFieldName/>
+    <extensionFieldName/>
+    <sizeFieldName/>
+    <spreadsheet_type>POI</spreadsheet_type>
+    <password>Encrypted </password>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>128</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1942,9 +2145,9 @@ INSERT INTO H_ABANDONO (ID_year,ID_CCAA,ID_SEXO,Tasa_Abandono) VALUES (2022,'?',
         <jsScript_script>//Script here
 
 var CCAA = 1;
-var Genero = 1;
+var Anno = 2013;
 
-var CCAACorresponde = {2:1,3:2,4:3,5:4,6:5,7:6,8:7,9:8,10:9,11:11,12:12,13:13,14:14,15:16,16:17,17:18,18:19,19:10,20:15};
+var CCAACorresponde = {2:1,11:2,15:3,16:4,17:5,20:6,21:7,31:8,37:9,42:11,46:12,49:13,54:14,55:16,56:17,57:18,61:19,62:10,63:15};
 
 
 if(rowNumber == 1){
@@ -1952,7 +2155,9 @@ if(rowNumber == 1){
 }
 else{
     CCAA = CCAACorresponde[rowNumber];
-}</jsScript_script>
+}
+
+</jsScript_script>
       </jsScript>
     </jsScripts>
     <fields>
@@ -1965,8 +2170,8 @@ else{
         <replace>N</replace>
       </field>
       <field>
-        <name>Genero</name>
-        <rename>Genero</rename>
+        <name>Anno</name>
+        <rename>Anno</rename>
         <type>Integer</type>
         <length>-1</length>
         <precision>-1</precision>
@@ -1982,13 +2187,13 @@ else{
       </output>
     </remotesteps>
     <GUI>
-      <xloc>480</xloc>
-      <yloc>208</yloc>
+      <xloc>400</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Modified JavaScript value Fem</name>
+    <name>Modified JavaScript value 2</name>
     <type>ScriptValueMod</type>
     <description/>
     <distribute>Y</distribute>
@@ -2007,17 +2212,19 @@ else{
         <jsScript_script>//Script here
 
 var CCAA = 1;
-var Genero = 2;
+var Anno = 2013;
 
-var CCAACorresponde = {2:1,3:2,4:3,5:4,6:5,7:6,8:7,9:8,10:9,11:11,12:12,13:13,14:14,15:16,16:17,17:18,18:19,19:10,20:15};
+var CCAACorresponde = {2:1,11:2,15:3,16:4,17:5,20:6,21:7,31:8,37:9,42:11,46:12,49:13,54:14,55:16,56:17,57:18,61:19,62:10,63:15};
 
 
-if(rowNumberFem == 1){
+if(rowNumberM == 1){
     CCAA = null;
 }
 else{
-    CCAA = CCAACorresponde[rowNumberFem];
-}</jsScript_script>
+    CCAA = CCAACorresponde[rowNumberM];
+}
+
+</jsScript_script>
       </jsScript>
     </jsScripts>
     <fields>
@@ -2030,8 +2237,8 @@ else{
         <replace>N</replace>
       </field>
       <field>
-        <name>Genero</name>
-        <rename>Genero</rename>
+        <name>Anno</name>
+        <rename>Anno</rename>
         <type>Integer</type>
         <length>-1</length>
         <precision>-1</precision>
@@ -2047,8 +2254,142 @@ else{
       </output>
     </remotesteps>
     <GUI>
-      <xloc>480</xloc>
+      <xloc>400</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Modified JavaScript value 2 2</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>//Script here
+
+var CCAA = 1;
+var Anno = 2013;
+
+var CCAACorresponde = {2:1,11:2,15:3,16:4,17:5,20:6,21:7,31:8,37:9,42:11,46:12,49:13,54:14,55:16,56:17,57:18,61:19,62:10,63:15};
+
+
+if(rowNumberMP == 1){
+    CCAA = null;
+}
+else{
+    CCAA = CCAACorresponde[rowNumberMP];
+}
+
+</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>CCAA</name>
+        <rename>CCAA</rename>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>Anno</name>
+        <rename>Anno</rename>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>400</xloc>
       <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Modified JavaScript value 3</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>//Script here
+
+var CCAA = 1;
+var Anno = 2013;
+
+var CCAACorresponde = {2:1,11:2,15:3,16:4,17:5,20:6,21:7,31:8,37:9,42:11,46:12,49:13,54:14,55:16,56:17,57:18,61:19,62:10,63:15};
+
+
+if(rowNumberP == 1){
+    CCAA = null;
+}
+else{
+    CCAA = CCAACorresponde[rowNumberP];
+}
+
+</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>CCAA</name>
+        <rename>CCAA</rename>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>Anno</name>
+        <rename>Anno</rename>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>400</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2065,97 +2406,38 @@ else{
     </partitioning>
     <fields>
       <field>
-        <name>2002</name>
-        <rename>2002tasa</rename>
+        <name>Menos de 30 años</name>
+        <rename>Menos de 30 añosH</rename>
       </field>
       <field>
-        <name>2003</name>
-        <rename>2003tasa</rename>
+        <name>De 30 a 39</name>
+        <rename>De 30 a 39H</rename>
       </field>
       <field>
-        <name>2004</name>
-        <rename>2004tasa</rename>
+        <name>De 40 a 49</name>
+        <rename>De 40 a 49H</rename>
       </field>
       <field>
-        <name>2005</name>
-        <rename>2005tasa</rename>
+        <name>De 50 a 59</name>
+        <rename>De 50 a 59H</rename>
       </field>
       <field>
-        <name>2006</name>
-        <rename>2006tasa</rename>
+        <name>De 60 a 64</name>
+        <rename>De 60 a 64H</rename>
       </field>
       <field>
-        <name>2007</name>
-        <rename>2007tasa</rename>
+        <name>65 y más</name>
+        <rename>65 y másH</rename>
       </field>
       <field>
-        <name>2008</name>
-        <rename>2008tasa</rename>
-      </field>
-      <field>
-        <name>2009</name>
-        <rename>2009tasa</rename>
-      </field>
-      <field>
-        <name>2010</name>
-        <rename>2010tasa</rename>
-      </field>
-      <field>
-        <name>2011</name>
-        <rename>2011tasa</rename>
-      </field>
-      <field>
-        <name>2012</name>
-        <rename>2012tasa</rename>
-      </field>
-      <field>
-        <name>2013</name>
-        <rename>2013tasa</rename>
-      </field>
-      <field>
-        <name>2014</name>
-        <rename>2014tasa</rename>
-      </field>
-      <field>
-        <name>2015</name>
-        <rename>2015tasa</rename>
-      </field>
-      <field>
-        <name>2016</name>
-        <rename>2016tasa</rename>
-      </field>
-      <field>
-        <name>2017</name>
-        <rename>2017tasa</rename>
-      </field>
-      <field>
-        <name>2018</name>
-        <rename>2018tasa</rename>
-      </field>
-      <field>
-        <name>2019</name>
-        <rename>2019tasa</rename>
-      </field>
-      <field>
-        <name>2020</name>
-        <rename>2020tasa</rename>
-      </field>
-      <field>
-        <name>2021</name>
-        <rename>2021tasa</rename>
-      </field>
-      <field>
-        <name>2022</name>
-        <rename>2022tasa</rename>
-      </field>
-      <field>
-        <name>rowNumber</name>
+        <name>No consta edad</name>
+        <rename>No consta edadH</rename>
       </field>
       <field>
         <name>CCAA</name>
       </field>
       <field>
-        <name>Genero</name>
+        <name>Anno</name>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -2168,13 +2450,13 @@ else{
       </output>
     </remotesteps>
     <GUI>
-      <xloc>832</xloc>
-      <yloc>208</yloc>
+      <xloc>768</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Select values Fem</name>
+    <name>Select values 2</name>
     <type>SelectValues</type>
     <description/>
     <distribute>N</distribute>
@@ -2186,97 +2468,38 @@ else{
     </partitioning>
     <fields>
       <field>
-        <name>2002</name>
-        <rename>2002tasa</rename>
+        <name>Menos de 30 años</name>
+        <rename>Menos de 30 añosM</rename>
       </field>
       <field>
-        <name>2003</name>
-        <rename>2003tasa</rename>
+        <name>De 30 a 39</name>
+        <rename>De 30 a 39M</rename>
       </field>
       <field>
-        <name>2004</name>
-        <rename>2004tasa</rename>
+        <name>De 40 a 49</name>
+        <rename>De 40 a 49M</rename>
       </field>
       <field>
-        <name>2005</name>
-        <rename>2005tasa</rename>
+        <name>De 50 a 59</name>
+        <rename>De 50 a 59M</rename>
       </field>
       <field>
-        <name>2006</name>
-        <rename>2006tasa</rename>
+        <name>De 60 a 64</name>
+        <rename>De 60 a 64M</rename>
       </field>
       <field>
-        <name>2007</name>
-        <rename>2007tasa</rename>
+        <name>65 y más</name>
+        <rename>65 y másM</rename>
       </field>
       <field>
-        <name>2008</name>
-        <rename>2008tasa</rename>
-      </field>
-      <field>
-        <name>2009</name>
-        <rename>2009tasa</rename>
-      </field>
-      <field>
-        <name>2010</name>
-        <rename>2010tasa</rename>
-      </field>
-      <field>
-        <name>2011</name>
-        <rename>2011tasa</rename>
-      </field>
-      <field>
-        <name>2012</name>
-        <rename>2012tasa</rename>
-      </field>
-      <field>
-        <name>2013</name>
-        <rename>2013tasa</rename>
-      </field>
-      <field>
-        <name>2014</name>
-        <rename>2014tasa</rename>
-      </field>
-      <field>
-        <name>2015</name>
-        <rename>2015tasa</rename>
-      </field>
-      <field>
-        <name>2016</name>
-        <rename>2016tasa</rename>
-      </field>
-      <field>
-        <name>2017</name>
-        <rename>2017tasa</rename>
-      </field>
-      <field>
-        <name>2018</name>
-        <rename>2018tasa</rename>
-      </field>
-      <field>
-        <name>2019</name>
-        <rename>2019tasa</rename>
-      </field>
-      <field>
-        <name>2020</name>
-        <rename>2020tasa</rename>
-      </field>
-      <field>
-        <name>2021</name>
-        <rename>2021tasa</rename>
-      </field>
-      <field>
-        <name>2022</name>
-        <rename>2022tasa</rename>
-      </field>
-      <field>
-        <name>rowNumberFem</name>
+        <name>No consta edad</name>
+        <rename>No consta edadM</rename>
       </field>
       <field>
         <name>CCAA</name>
       </field>
       <field>
-        <name>Genero</name>
+        <name>Anno</name>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -2289,8 +2512,132 @@ else{
       </output>
     </remotesteps>
     <GUI>
-      <xloc>880</xloc>
+      <xloc>768</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Select values 2 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>Menos de 30 años</name>
+        <rename>Menos de 30 añosM</rename>
+      </field>
+      <field>
+        <name>De 30 a 39</name>
+        <rename>De 30 a 39M</rename>
+      </field>
+      <field>
+        <name>De 40 a 49</name>
+        <rename>De 40 a 49M</rename>
+      </field>
+      <field>
+        <name>De 50 a 59</name>
+        <rename>De 50 a 59M</rename>
+      </field>
+      <field>
+        <name>De 60 a 64</name>
+        <rename>De 60 a 64M</rename>
+      </field>
+      <field>
+        <name>65 y más</name>
+        <rename>65 y másM</rename>
+      </field>
+      <field>
+        <name>No consta edad</name>
+        <rename>No consta edadM</rename>
+      </field>
+      <field>
+        <name>CCAA</name>
+      </field>
+      <field>
+        <name>Anno</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>768</xloc>
       <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Select values 3</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>Menos de 30 años</name>
+        <rename>Menos de 30 añosH</rename>
+      </field>
+      <field>
+        <name>De 30 a 39</name>
+        <rename>De 30 a 39H</rename>
+      </field>
+      <field>
+        <name>De 40 a 49</name>
+        <rename>De 40 a 49H</rename>
+      </field>
+      <field>
+        <name>De 50 a 59</name>
+        <rename>De 50 a 59H</rename>
+      </field>
+      <field>
+        <name>De 60 a 64</name>
+        <rename>De 60 a 64H</rename>
+      </field>
+      <field>
+        <name>65 y más</name>
+        <rename>65 y másH</rename>
+      </field>
+      <field>
+        <name>No consta edad</name>
+        <rename>No consta edadH</rename>
+      </field>
+      <field>
+        <name>CCAA</name>
+      </field>
+      <field>
+        <name>Anno</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>768</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
