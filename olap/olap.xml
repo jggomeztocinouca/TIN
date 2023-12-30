@@ -6,10 +6,10 @@
             <Level name="ComunidadAutonoma" column="Comunidad_Autonoma" uniqueMembers="true"/>
         </Hierarchy>
     </Dimension>
-    <Dimension name="Anio">
+    <Dimension name="Anio" type="TimeDimension">
         <Hierarchy hasAll="true" allMemberName="Todos los Años" primaryKey="ID_year">
             <Table name="D_YEAR"/>
-            <Level name="Año" column="ID_year" type="Numeric" uniqueMembers="true"/>
+            <Level name="Year" column="ID_year" type="Numeric" uniqueMembers="true" levelType="TimeYears"/>
         </Hierarchy>
     </Dimension>
     <Dimension name="Sexo">
