@@ -1,4 +1,4 @@
-<Schema name="SpainEducation">
+<Schema name="EducacionEspañola">
     <!-- Dimensiones -->
     <Dimension name="ComunidadesAutonomas">
         <Hierarchy hasAll="true" allMemberName="Todas las CCAA" primaryKey="CCAA_ID">
@@ -6,10 +6,16 @@
             <Level name="ComunidadAutonoma" column="Comunidad_Autonoma" uniqueMembers="true"/>
         </Hierarchy>
     </Dimension>
-    <Dimension name="Anio" type="TimeDimension">
+    <Dimension name="Año" type="TimeDimension">
         <Hierarchy hasAll="true" allMemberName="Todos los Años" primaryKey="ID_year">
             <Table name="D_YEAR"/>
-            <Level name="Year" column="ID_year" type="Numeric" uniqueMembers="true" levelType="TimeYears"/>
+            <Level name="Year" column="ID_year" type="Numeric" uniqueMembers="true" levelType="TimeYears">
+                <Annotations>
+                    <Annotation name = "AnalyzerDateFormat">
+                        [yyyy]
+                    </Annotation>
+                </Annotations>
+            </Level>
         </Hierarchy>
     </Dimension>
     <Dimension name="Sexo">
@@ -30,7 +36,7 @@
             <Level name="Tipo de Centro" column="TIPO" uniqueMembers="true"/>
         </Hierarchy>
     </Dimension>
-    <Dimension name="Ensenanza">
+    <Dimension name="Enseñanza">
         <Hierarchy hasAll="true" allMemberName="Todos los Tipos" primaryKey="ID_ENSENANZA">
             <Table name="D_ENSENANZA"/>
             <Level name="Tipo de Enseñanza" column="TIPO" uniqueMembers="true"/>
@@ -41,7 +47,7 @@
     <Cube name="Abandono">
         <Table name="H_ABANDONO"/>
         <DimensionUsage name="ComunidadesAutonomas" source="ComunidadesAutonomas" foreignKey="ID_CCAA"/>
-        <DimensionUsage name="Anio" source="Anio" foreignKey="ID_year"/>
+        <DimensionUsage name="Año" source="Año" foreignKey="ID_year"/>
         <DimensionUsage name="Sexo" source="Sexo" foreignKey="ID_SEXO"/>
         <Measure name="Tasa de Abandono" column="Tasa_Abandono" aggregator="avg"/>
     </Cube>
@@ -49,17 +55,17 @@
     <Cube name="NumeroAlumnos">
         <Table name="H_NUMALUMNOS"/>
         <DimensionUsage name="ComunidadesAutonomas" source="ComunidadesAutonomas" foreignKey="CCAA_ID"/>
-        <DimensionUsage name="Anio" source="Anio" foreignKey="YEAR_ID"/>
+        <DimensionUsage name="Año" source="Año" foreignKey="YEAR_ID"/>
         <DimensionUsage name="Sexo" source="Sexo" foreignKey="SEXO_ID"/>
         <DimensionUsage name="Centros" source="Centros" foreignKey="CENTRO_ID"/>
-        <DimensionUsage name="Ensenanza" source="Ensenanza" foreignKey="ENSENANZA_ID"/>
+        <DimensionUsage name="Enseñanza" source="Enseñanza" foreignKey="ENSENANZA_ID"/>
         <Measure name="Numero de Alumnos" column="nALUMNOS" aggregator="sum"/>
     </Cube>
 
     <Cube name="NumeroProfesores">
         <Table name="H_NUMPROFESORES"/>
         <DimensionUsage name="ComunidadesAutonomas" source="ComunidadesAutonomas" foreignKey="CCAA_ID"/>
-        <DimensionUsage name="Anio" source="Anio" foreignKey="YEAR_ID"/>
+        <DimensionUsage name="Año" source="Año" foreignKey="YEAR_ID"/>
         <DimensionUsage name="Sexo" source="Sexo" foreignKey="SEXO_ID"/>
         <DimensionUsage name="Centros" source="Centros" foreignKey="CENTRO_ID"/>
         <DimensionUsage name="Edad" source="Edad" foreignKey="EDAD_ID"/>
