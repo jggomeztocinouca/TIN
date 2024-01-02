@@ -1,7 +1,7 @@
 version: "3.1"
 
 services:
-  db:
+  mysql:
     image: mysql:latest
     restart: always
     environment:
@@ -22,6 +22,19 @@ services:
     environment:
       PMA_HOST: db
       MYSQL_ROOT_PASSWORD: root
+
+  ngrok:
+    image: ngrok/ngrok:latest
+    restart: unless-stopped
+    command:
+      - "start"
+      - "--all"
+      - "--config"
+      - "/etc/ngrok.yml"
+    volumes:
+      - ./ngrok.yml:/etc/ngrok.yml
+    ports:
+      - 4040:4040
 
 volumes:
   db_data:
