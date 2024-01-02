@@ -7,20 +7,20 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
     volumes:
-      - db_data:/var/lib/mysql
+      - mysql_data:/var/lib/mysql
       - ./mysql-files:/home/mysql-files # Carpeta compartida con el host
     ports:
       - "3306:3306"
 
   phpmyadmin:
     depends_on:
-      - db
+      - mysql
     image: phpmyadmin/phpmyadmin
     restart: always
     ports:
       - "8081:80"
     environment:
-      PMA_HOST: db
+      PMA_HOST: mysql
       MYSQL_ROOT_PASSWORD: root
 
   ngrok:
@@ -37,4 +37,4 @@ services:
       - 4040:4040
 
 volumes:
-  db_data:
+  mysql_data:
