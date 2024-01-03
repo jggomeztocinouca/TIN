@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>InsertNumAlumnosCurso2018</name>
+    <name>InsertNumAlumnosCurso2017</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -527,7 +527,7 @@
     </hop>
     <hop>
       <from>Select values</from>
-      <to>InsertFacts Publicos 2018 HOMBRES</to>
+      <to>InsertFacts Publicos 2017 HOMBRES</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -557,7 +557,7 @@
     </hop>
     <hop>
       <from>Select values 2</from>
-      <to>InsertFacts Publicos 2018 Mujer 2</to>
+      <to>InsertFacts Publicos 2017 Mujer 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -587,7 +587,7 @@
     </hop>
     <hop>
       <from>Select values 3</from>
-      <to>InsertFacts Privados  2018 HOMBRES 2</to>
+      <to>InsertFacts Privados  2017 HOMBRES 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -617,7 +617,7 @@
     </hop>
     <hop>
       <from>Select values 2 2</from>
-      <to>InsertFacts Publicos 2018 Mujer 2 2</to>
+      <to>InsertFacts Publicos 2017 Mujer 2 2</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -1038,7 +1038,7 @@
     </GUI>
   </step>
   <step>
-    <name>InsertFacts Privados  2018 HOMBRES 2</name>
+    <name>InsertFacts Privados  2017 HOMBRES 2</name>
     <type>ExecSQL</type>
     <description/>
     <distribute>Y</distribute>
@@ -1225,7 +1225,7 @@ INSERT INTO H_NUMALUMNOS (YEAR_ID, SEXO_ID, CCAA_ID, CENTRO_ID, ENSENANZA_ID, nA
     </GUI>
   </step>
   <step>
-    <name>InsertFacts Publicos 2018 HOMBRES</name>
+    <name>InsertFacts Publicos 2017 HOMBRES</name>
     <type>ExecSQL</type>
     <description/>
     <distribute>Y</distribute>
@@ -1412,7 +1412,7 @@ INSERT INTO H_NUMALUMNOS (YEAR_ID, SEXO_ID, CCAA_ID, CENTRO_ID, ENSENANZA_ID, nA
     </GUI>
   </step>
   <step>
-    <name>InsertFacts Publicos 2018 Mujer 2</name>
+    <name>InsertFacts Publicos 2017 Mujer 2</name>
     <type>ExecSQL</type>
     <description/>
     <distribute>Y</distribute>
@@ -1599,7 +1599,7 @@ INSERT INTO H_NUMALUMNOS (YEAR_ID, SEXO_ID, CCAA_ID, CENTRO_ID, ENSENANZA_ID, nA
     </GUI>
   </step>
   <step>
-    <name>InsertFacts Publicos 2018 Mujer 2 2</name>
+    <name>InsertFacts Publicos 2017 Mujer 2 2</name>
     <type>ExecSQL</type>
     <description/>
     <distribute>Y</distribute>
@@ -1812,7 +1812,7 @@ INSERT INTO H_NUMALUMNOS (YEAR_ID, SEXO_ID, CCAA_ID, CENTRO_ID, ENSENANZA_ID, nA
     <accept_field/>
     <accept_stepname/>
     <file>
-      <name>C:\TIN\pdi\Fuentes\AlumnadoMatriculado2018.xlsx</name>
+      <name>C:\TIN\pdi\Fuentes\AlumnadoMatriculado2017.xlsx</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -2072,7 +2072,7 @@ INSERT INTO H_NUMALUMNOS (YEAR_ID, SEXO_ID, CCAA_ID, CENTRO_ID, ENSENANZA_ID, nA
     <accept_field/>
     <accept_stepname/>
     <file>
-      <name>C:\TIN\pdi\Fuentes\AlumnadoMatriculado2018.xlsx</name>
+      <name>C:\TIN\pdi\Fuentes\AlumnadoMatriculado2017.xlsx</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -2332,7 +2332,7 @@ INSERT INTO H_NUMALUMNOS (YEAR_ID, SEXO_ID, CCAA_ID, CENTRO_ID, ENSENANZA_ID, nA
     <accept_field/>
     <accept_stepname/>
     <file>
-      <name>C:\TIN\pdi\Fuentes\AlumnadoMatriculado2018.xlsx</name>
+      <name>C:\TIN\pdi\Fuentes\AlumnadoMatriculado2017.xlsx</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -2592,7 +2592,7 @@ INSERT INTO H_NUMALUMNOS (YEAR_ID, SEXO_ID, CCAA_ID, CENTRO_ID, ENSENANZA_ID, nA
     <accept_field/>
     <accept_stepname/>
     <file>
-      <name>C:\TIN\pdi\Fuentes\AlumnadoMatriculado2018.xlsx</name>
+      <name>C:\TIN\pdi\Fuentes\AlumnadoMatriculado2017.xlsx</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -2845,7 +2845,7 @@ INSERT INTO H_NUMALUMNOS (YEAR_ID, SEXO_ID, CCAA_ID, CENTRO_ID, ENSENANZA_ID, nA
         <jsScript_script>//Script here
 
 var CCAA = 1;
-var Anno = 2018;
+var Anno = 2017;
 
 var CCAACorresponde = {2:1,11:2,15:3,16:4,17:5,20:6,21:7,31:8,37:9,42:11,46:12,49:13,54:14,55:16,56:17,57:18,61:19,62:10,63:15};
 
@@ -2912,7 +2912,7 @@ else{
         <jsScript_script>//Script here
 
 var CCAA = 1;
-var Anno = 2018;
+var Anno = 2017;
 
 var CCAACorresponde = {2:1,11:2,15:3,16:4,17:5,20:6,21:7,31:8,37:9,42:11,46:12,49:13,54:14,55:16,56:17,57:18,61:19,62:10,63:15};
 
@@ -2979,7 +2979,7 @@ else{
         <jsScript_script>//Script here
 
 var CCAA = 1;
-var Anno = 2018;
+var Anno = 2017;
 
 var CCAACorresponde = {2:1,11:2,15:3,16:4,17:5,20:6,21:7,31:8,37:9,42:11,46:12,49:13,54:14,55:16,56:17,57:18,61:19,62:10,63:15};
 
@@ -3046,7 +3046,7 @@ else{
         <jsScript_script>//Script here
 
 var CCAA = 1;
-var Anno = 2018;
+var Anno = 2017;
 
 var CCAACorresponde = {2:1,11:2,15:3,16:4,17:5,20:6,21:7,31:8,37:9,42:11,46:12,49:13,54:14,55:16,56:17,57:18,61:19,62:10,63:15};
 
