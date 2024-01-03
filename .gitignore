@@ -1,3 +1,6 @@
 pentaho-server/
 jdk-11.0.20/
 data-integration/
+report-designer/
+schema-workbench/
+mysql-connector-java-5.1.49.jar
