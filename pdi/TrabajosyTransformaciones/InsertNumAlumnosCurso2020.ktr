@@ -2845,7 +2845,7 @@ INSERT INTO H_NUMALUMNOS (YEAR_ID, SEXO_ID, CCAA_ID, CENTRO_ID, ENSENANZA_ID, nA
         <jsScript_script>//Script here
 
 var CCAA = 1;
-var Anno = 2021;
+var Anno = 2020;
 
 var CCAACorresponde = {2:1,11:2,15:3,16:4,17:5,20:6,21:7,31:8,37:9,42:11,46:12,49:13,54:14,55:16,56:17,57:18,61:19,62:10,63:15};
 
@@ -2912,7 +2912,7 @@ else{
         <jsScript_script>//Script here
 
 var CCAA = 1;
-var Anno = 2021;
+var Anno = 2020;
 
 var CCAACorresponde = {2:1,11:2,15:3,16:4,17:5,20:6,21:7,31:8,37:9,42:11,46:12,49:13,54:14,55:16,56:17,57:18,61:19,62:10,63:15};
 
@@ -2979,7 +2979,7 @@ else{
         <jsScript_script>//Script here
 
 var CCAA = 1;
-var Anno = 2021;
+var Anno = 2020;
 
 var CCAACorresponde = {2:1,11:2,15:3,16:4,17:5,20:6,21:7,31:8,37:9,42:11,46:12,49:13,54:14,55:16,56:17,57:18,61:19,62:10,63:15};
 
@@ -3046,7 +3046,7 @@ else{
         <jsScript_script>//Script here
 
 var CCAA = 1;
-var Anno = 2021;
+var Anno = 2020;
 
 var CCAACorresponde = {2:1,11:2,15:3,16:4,17:5,20:6,21:7,31:8,37:9,42:11,46:12,49:13,54:14,55:16,56:17,57:18,61:19,62:10,63:15};
 

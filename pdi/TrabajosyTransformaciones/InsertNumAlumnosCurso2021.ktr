@@ -527,7 +527,7 @@
     </hop>
     <hop>
       <from>Select values</from>
-      <to>InsertFacts Publicos 2022 HOMBRES</to>
+      <to>InsertFacts Publicos 2021 HOMBRES</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -557,7 +557,7 @@
     </hop>
     <hop>
       <from>Select values 2</from>
-      <to>InsertFacts Publicos 2022 Mujer 2</to>
+      <to>InsertFacts Publicos 2021 Mujer 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -587,7 +587,7 @@
     </hop>
     <hop>
       <from>Select values 3</from>
-      <to>InsertFacts Privados  2022 HOMBRES 2</to>
+      <to>InsertFacts Privados  2021 HOMBRES 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -617,7 +617,7 @@
     </hop>
     <hop>
       <from>Select values 2 2</from>
-      <to>InsertFacts Publicos 2022 Mujer 2 2</to>
+      <to>InsertFacts Publicos 2021 Mujer 2 2</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -918,9 +918,9 @@
     <selectValuesType>N</selectValuesType>
     <setEmptyStringAll>N</setEmptyStringAll>
     <valuetypes>
-    </valuetypes>
+      </valuetypes>
     <fields>
-    </fields>
+      </fields>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -952,9 +952,9 @@
     <selectValuesType>N</selectValuesType>
     <setEmptyStringAll>N</setEmptyStringAll>
     <valuetypes>
-    </valuetypes>
+      </valuetypes>
     <fields>
-    </fields>
+      </fields>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -986,9 +986,9 @@
     <selectValuesType>N</selectValuesType>
     <setEmptyStringAll>N</setEmptyStringAll>
     <valuetypes>
-    </valuetypes>
+      </valuetypes>
     <fields>
-    </fields>
+      </fields>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -1020,9 +1020,9 @@
     <selectValuesType>N</selectValuesType>
     <setEmptyStringAll>N</setEmptyStringAll>
     <valuetypes>
-    </valuetypes>
+      </valuetypes>
     <fields>
-    </fields>
+      </fields>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -1038,7 +1038,7 @@
     </GUI>
   </step>
   <step>
-    <name>InsertFacts Privados  2022 HOMBRES 2</name>
+    <name>InsertFacts Privados  2021 HOMBRES 2</name>
     <type>ExecSQL</type>
     <description/>
     <distribute>Y</distribute>
@@ -1225,7 +1225,7 @@ INSERT INTO H_NUMALUMNOS (YEAR_ID, SEXO_ID, CCAA_ID, CENTRO_ID, ENSENANZA_ID, nA
     </GUI>
   </step>
   <step>
-    <name>InsertFacts Publicos 2022 HOMBRES</name>
+    <name>InsertFacts Publicos 2021 HOMBRES</name>
     <type>ExecSQL</type>
     <description/>
     <distribute>Y</distribute>
@@ -1412,7 +1412,7 @@ INSERT INTO H_NUMALUMNOS (YEAR_ID, SEXO_ID, CCAA_ID, CENTRO_ID, ENSENANZA_ID, nA
     </GUI>
   </step>
   <step>
-    <name>InsertFacts Publicos 2022 Mujer 2</name>
+    <name>InsertFacts Publicos 2021 Mujer 2</name>
     <type>ExecSQL</type>
     <description/>
     <distribute>Y</distribute>
@@ -1599,7 +1599,7 @@ INSERT INTO H_NUMALUMNOS (YEAR_ID, SEXO_ID, CCAA_ID, CENTRO_ID, ENSENANZA_ID, nA
     </GUI>
   </step>
   <step>
-    <name>InsertFacts Publicos 2022 Mujer 2 2</name>
+    <name>InsertFacts Publicos 2021 Mujer 2 2</name>
     <type>ExecSQL</type>
     <description/>
     <distribute>Y</distribute>
